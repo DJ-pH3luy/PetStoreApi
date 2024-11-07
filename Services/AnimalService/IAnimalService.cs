@@ -5,5 +5,4 @@ namespace PetStoreApi.Services.AnimalService;
 
 public interface IAnimalService
 {
-    IEnumerable<AnimalView> ToListView(List<Animal> animals);
 }

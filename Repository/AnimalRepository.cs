@@ -12,4 +12,9 @@ public class AnimalRepository(PetStoreDbContext _dbContext) : Repository<Animal>
     {
         return await _query.ToListAsync();
     }
+
+    public async Task<Animal?> GetAnimalById(int id)
+    {
+        return await _query.Where(a => a.Id == id).FirstOrDefaultAsync();
+    }
 }
